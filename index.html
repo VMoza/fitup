@@ -47,7 +47,7 @@
 					                		<!--<input id="answer" ty type="text" name="artistname">-->
 					                		<input id="interestarea" type="text" maxlength="55" class="box" autofocus placeholder="Desired Workout (i.e. Push)"/>
 					                		<input id="time" type="text" maxlength="55" class="box" autofocus placeholder="Time in Minutes (i.e. 45)"/>
-					               			<br/>
+					               			
 					               			<input type="submit" class="submit" value="GENERATE"/>
 					            		</form>
 					            		<script>
@@ -56,21 +56,19 @@
 					  							var response2 = document.getElementById('time').value;
 					  							response1 = response1.trim();
 					  							response2 = response2.trim();
-					  							if (response2 < 30)
-					  								location = 'notime.html'
-					  							else if ((response1 == "push" || response1 == "Push") && (response2 >= 30 && response2 < 60))
+					  							if ((response1 == "push" || response1 == "Push") && (response2 < 60))
 					    							location = 'push30.html';
 					  							else if ((response1 == "push" || response1 == "Push") && (response2 >= 60 && response2 < 90))
 					    							location = 'push60.html';
 					    						else if ((response1 == "push" || response1 == "Push") && (response2 >= 90))
 					    							location = 'push90.html';
-					    						else if ((response1 == "pull" || response1 == "Pull") && (response2 >= 30 && response2 < 60))
+					    						else if ((response1 == "pull" || response1 == "Pull") && (response2 < 60))
 					    							location = 'pull30.html';
 					    						else if ((response1 == "pull" || response1 == "Pull") && (response2 >= 60 && response2 < 90))
 					    							location = 'pull60.html';
 					    						else if ((response1 == "pull" || response1 == "Pull") && (response2 >= 90))
 					    							location = 'pull90.html';
-					    						else if ((response1 == "legs" || response1 == "Legs") && (response2 >= 30 && response2 < 60))
+					    						else if ((response1 == "legs" || response1 == "Legs") && (response2 < 60))
 					    							location = 'legs30.html';
 					    						else if ((response1 == "legs" || response1 == "Legs") && (response2 >= 60 && response2 < 90))
 					    							location = 'legs60.html';
@@ -83,7 +81,7 @@
 										</script>
 									</div>
 								</div>
-							<p><br>Created by Vasuman Moza</p>
+							<p>Created by Vasuman Moza</p>
 						</div>
 					</section>
 			</div>

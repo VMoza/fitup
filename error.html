@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Fitup</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css"/>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="shortcut icon" href="images/faviconNew.ico" type="image/x-icon">
+		<link rel="icon" href="images/faviconNew.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Fitup</h2>
+							<h3>You did not enter Push or Pull or Legs. Please Try Again</h3>
+							<p>Enter your desired workout: "Push" || "Pull" || "Legs" and Time in Minutes</p>
+								<!--<section>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="name">Name</label>
+												<input type="text" name="name" id="name" />
+											</div>
+											<div class="field half">
+												<label for="email">Email</label>
+												<input type="text" name="email" id="email" />
+											</div>
+											<div class="field">
+												<label for="message">Message</label>
+												<textarea name="message" id="message" rows="5"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><a href="" class="button submit">Send Message</a></li>
+										</ul>
+									</form>
+								</section>-->
+								<div id="main">
+									<div class="inner">
+										<form onsubmit="return answer();">
+					                		<!--<input id="answer" ty type="text" name="artistname">-->
+					                		<input id="interestarea" type="text" maxlength="55" class="box" autofocus placeholder="Desired Workout (i.e. Push)"/>
+					                		<input id="time" type="text" maxlength="55" class="box" autofocus placeholder="Time in Minutes (i.e. 45)"/>
+					               			
+					               			<input type="submit" class="submit" value="GENERATE"/>
+					            		</form>
+					            		<script>
+					            			function answer() {
+					  							var response1 = document.getElementById('interestarea').value;
+					  							var response2 = document.getElementById('time').value;
+					  							response1 = response1.trim();
+					  							response2 = response2.trim();
+					  							if ((response1 == "push" || response1 == "Push") && (response2 < 60))
+					    							location = 'push30.html';
+					  							else if ((response1 == "push" || response1 == "Push") && (response2 >= 60 && response2 < 90))
+					    							location = 'push60.html';
+					    						else if ((response1 == "push" || response1 == "Push") && (response2 >= 90))
+					    							location = 'push90.html';
+					    						else if ((response1 == "pull" || response1 == "Pull") && (response2 < 60))
+					    							location = 'pull30.html';
+					    						else if ((response1 == "pull" || response1 == "Pull") && (response2 >= 60 && response2 < 90))
+					    							location = 'pull60.html';
+					    						else if ((response1 == "pull" || response1 == "Pull") && (response2 >= 90))
+					    							location = 'pull90.html';
+					    						else if ((response1 == "legs" || response1 == "Legs") && (response2 < 60))
+					    							location = 'legs30.html';
+					    						else if ((response1 == "legs" || response1 == "Legs") && (response2 >= 60 && response2 < 90))
+					    							location = 'legs60.html';
+					    						else if ((response1 == "legs" || response1 == "Legs") && (response2 >= 90))
+					    							location = 'legs90.html';
+					    						else
+					    							location = 'error.html';
+					    						return false;
+											}	
+										</script>
+									</div>
+								</div>
+							<p>Created by Vasuman Moza</p>
+						</div>
+					</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
